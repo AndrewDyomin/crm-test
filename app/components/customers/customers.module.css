@@ -1,3 +1,9 @@
+@media screen and (max-width: 428px) {
+    .area {
+        padding: 10px 5px;
+    }    
+}
+
 .area {
     padding: 30px 44px 40px 38px;
     background-color: var(--white);
@@ -22,7 +28,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    color: var(--light-green);
+    color: #16C098;
 }
 
 .searchArea{
@@ -67,4 +73,88 @@
 
 .customersList {
     color: var(--current);
+}
+
+.active {
+    display: flex;
+    width: 80px;
+    height: 29px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 4px;
+    background: var(--light-green);
+}
+
+.inactive {
+    border: 1px solid var(--red);
+    background: var(--light-red);
+    color: var(--red);
+}
+
+.toggle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: currentColor;
+}
+
+.showData {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #B5B7C0;
+    margin: 0;
+}
+
+.paginationArea {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.buttonList {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.paginationBtn {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    background: #f5f5f5;
+    width: 26px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.currentPagination {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #5932EA;
+    border-radius: 4px;
+    background: #5932EA;
+    width: 26px;
+    height: 24px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.sideIcon {
+    width: 8px;
+    height: 10px;
 }

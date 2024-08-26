@@ -15,7 +15,7 @@
         <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="currentColor" d="M13.933 21.707l-1.133-1.147"></path>
         <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" stroke="currentColor" d="M17.859 14.267h0.012"></path>
     </svg>
-    <symbol id="icon-left" width="32" height="32" viewBox="0 0 32 32" x="0" y="0">
+    <symbol id="icon-left" viewBox="0 0 32 32" x="0" y="0">
         <path fill="currentColor" d="M17.993 29.221l-12.617-12.453 12.617-12.453h7.899l-12.672 12.453 12.672 12.453h-7.899z"></path>
     </symbol>
     <svg id="icon-right" width="32" height="32" viewBox="0 0 32 32" x="0" y="0">

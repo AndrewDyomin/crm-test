@@ -5,9 +5,11 @@
   --slate: #9197B3;
   --light-brown: #838383;
   --iris: #5932EA;
-  --light-green: #16C098;
+  --light-green: #16C09838;
   --green: #008767;
   --current: #292D32;
+  --red: #DF0404;
+  --light-red: #FFC5C5;
 }
 
 body {

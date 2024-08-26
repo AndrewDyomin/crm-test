@@ -1,4 +1,14 @@
-.container {
+/* 428px, 768px, 1158px. */
+
+@media screen and (max-width: 428px) {
+    .container {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -6,22 +16,22 @@
     padding: 36px 28px 76px 28px;
     background-color: var(--white);
     height: 100vh;
-}
+  }
 
-.menuTitleArea {
+  .menuTitleArea {
     display: flex;
     align-items: center;
-}
+  }
 
-.menuTitle {
+  .menuTitle {
     font-weight: 600;
     font-size: 26px;
     line-height: 39px;
     margin: 0;
     margin-left: 8px;
-}
+  }
 
-.version {
+  .version {
     margin: 0;
     margin-left: 4px;
     transform: translate(0, 50%);
@@ -29,38 +39,38 @@
     font-size: 12px;
     line-height: 18px;
     color: var(--light-brown);
-}
+  }
 
-.menuIcon {
+  .menuIcon {
     width: 32px;
     height: 32px;
     color: var(--black);
-}
+  }
 
-.navList {
+  .navList {
     padding: 0;
     margin-top: 53px;
     margin-bottom: 0;
-}
+  }
 
-.item {
+  .item {
     list-style: none;
     color: var(--slate);
-}
+  }
 
-.item:nth-child(n + 2) {
+  .item:nth-child(n + 2) {
     margin-top: 18px;
-}
+  }
 
-.navIcon {
+  .navIcon {
     padding: 0;
     color: currentColor;
     width: 27px;
     height: 27px;
     margin-right: 14px;
-}
+  }
 
-.button {
+  .button {
     border: none;
     border-radius: 8px;
     width: 100%;
@@ -77,38 +87,39 @@
     font-weight: 500;
     line-height: 21px;
     cursor: pointer;
-}
+  }
 
-.activeBtn {
+  .activeBtn {
     background-color: var(--iris);
     color: var(--white);
-}
+  }
 
-.chevron {
+  .chevron {
     display: block;
     width: 21px;
     height: 21px;
     margin: 0;
     margin-left: auto;
-}
+  }
 
-.userCard {
+  .userCard {
     margin-top: auto;
     display: flex;
     align-items: center;
-}
+  }
 
-.userName {
+  .userName {
     margin-left: 12px;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-}
+  }
 
-.userRole {
+  .userRole {
     margin-left: 12px;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: var(--light-brown)
+    color: var(--light-brown);
+  }
 }
