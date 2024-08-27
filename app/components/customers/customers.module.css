@@ -1,3 +1,61 @@
+.showData {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #b5b7c0;
+  margin: 0;
+}
+
+.paginationArea {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.buttonList {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.paginationBtn {
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background: #f5f5f5;
+  width: 26px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.currentPagination {
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid #5932ea;
+  border-radius: 4px;
+  background: #5932ea;
+  width: 26px;
+  height: 24px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.sideIcon {
+  width: 8px;
+  height: 10px;
+}
+
 @media screen and (max-width: 428px) {
   .area {
     padding: 0;
@@ -22,7 +80,6 @@
   .searchArea {
     display: flex;
     align-items: center;
-    /* margin-left: auto; */
   }
 
   .searchIcon {
@@ -44,6 +101,60 @@
     border-radius: 10px;
     border: none;
     padding-left: 40px;
+  }
+
+  .headersList {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .customersList {
+    color: var(--current);
+    list-style: none;
+    padding: 13px 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+  }
+
+  .active {
+    display: flex;
+    width: 70px;
+    height: 29px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 4px;
+    background: var(--light-green);
+  }
+
+  .inactive {
+    border: 1px solid var(--red);
+    background: var(--light-red);
+    color: var(--red);
+  }
+
+  .toggle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: currentColor;
+  }
+
+  .paginationArea {
+    flex-direction: column;
+  }
+
+  .buttonList {
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }
 
@@ -94,15 +205,6 @@
     border: none;
     padding-left: 40px;
   }
-}
-
-@media screen and (min-width: 1157px) {
-  .area {
-    padding: 30px 44px 40px 38px;
-    background-color: var(--white);
-    border-radius: 30px;
-    width: 100%;
-  }
 
   .headersList {
     list-style: none;
@@ -145,6 +247,15 @@
     font-weight: 500;
     line-height: 21px;
     color: currentColor;
+  }
+}
+
+@media screen and (min-width: 1157px) {
+  .area {
+    padding: 30px 44px 40px 38px;
+    background-color: var(--white);
+    border-radius: 30px;
+    width: 100%;
   }
 
   .showData {

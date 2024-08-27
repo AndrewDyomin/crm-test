@@ -1,7 +1,7 @@
-import Status from "./status";
+import { Status } from "./status";
 import css from "./customers.module.css";
 
-export default function Customers() {
+export const Customers = () => {
   const customers = [
     {
       name: "Jane Cooper",
@@ -94,7 +94,7 @@ export default function Customers() {
       <ul>
         {customers.map((customer) => (
           <li key={customer.name}>
-            <ul className={`${css.headersList} ${css.customersList}`}>
+            <ul className={css.customersList}>
               <li>{customer.name}</li>
               <li>{customer.company}</li>
               <li>{customer.tel}</li>

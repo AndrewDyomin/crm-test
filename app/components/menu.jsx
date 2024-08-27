@@ -1,7 +1,7 @@
 import css from "./menu.module.css";
 import Image from "next/image";
 
-export default function Menu() {
+export const Menu = () => {
   return (
     <div className={css.container}>
       <div className={css.menuTitleArea}>
