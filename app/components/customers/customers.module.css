@@ -56,7 +56,22 @@
   height: 10px;
 }
 
-@media screen and (max-width: 428px) {
+.menuButton {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--black);
+}
+
+@media screen and (max-width: 767px) {
   .area {
     padding: 0;
   }
@@ -159,7 +174,18 @@
 }
 
 @media screen and (min-width: 768px) {
-    .title {
+  .menuButton {
+    visibility: hidden;
+  }
+
+  .area {
+    padding: 30px 44px 40px 38px;
+    background-color: var(--white);
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  .title {
     font-size: 22px;
     font-weight: 600;
     line-height: 33px;
@@ -221,6 +247,16 @@
 
   .customersList {
     color: var(--current);
+    list-style: none;
+    padding: 13px 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
   }
 
   .active {
@@ -251,13 +287,6 @@
 }
 
 @media screen and (min-width: 1157px) {
-  .area {
-    padding: 30px 44px 40px 38px;
-    background-color: var(--white);
-    border-radius: 30px;
-    width: 100%;
-  }
-
   .showData {
     font-size: 14px;
     font-weight: 500;

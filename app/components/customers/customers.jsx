@@ -1,5 +1,11 @@
+"use client";
+
 import { Status } from "./status";
 import css from "./customers.module.css";
+import styles from "../menu.module.css";
+import Modal from "react-modal";
+import { useState } from "react";
+import Image from "next/image";
 
 export const Customers = () => {
   const customers = [
@@ -69,6 +75,30 @@ export const Customers = () => {
     },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const customStyles = {
+    overlay: {
+      backgroundColor: "rgba(9, 9, 9, 0.75)",
+      position: "fixed",
+    },
+    content: {
+      top: "60px",
+      left: "auto",
+      right: "-135px",
+      bottom: "auto",
+      transform: "translateX(-50%)",
+      width: "300px",
+      height: "80%",
+      padding: "24px",
+      borderRadius: "4px",
+      border: "1px solid black",
+      backgroundColor: "FFF",
+      transition: "transform 1s ease-in-out",
+      position: "absolute",
+    },
+  };
+
   return (
     <div className={css.area}>
       <div className={css.titleArea}>
@@ -118,34 +148,20 @@ export const Customers = () => {
             </button>
           </li>
           <li>
-            <button className={css.currentPagination}>
-              1
-            </button>
+            <button className={css.currentPagination}>1</button>
           </li>
           <li>
-            <button className={css.paginationBtn}>
-              2
-            </button>
+            <button className={css.paginationBtn}>2</button>
           </li>
           <li>
-            <button className={css.paginationBtn}>
-              3
-            </button>
+            <button className={css.paginationBtn}>3</button>
           </li>
           <li>
-            <button className={css.paginationBtn}>
-              4
-            </button>
+            <button className={css.paginationBtn}>4</button>
           </li>
+          <li>...</li>
           <li>
-            
-              ...
-            
-          </li>
-          <li>
-            <button className={css.paginationBtn}>
-              40
-            </button>
+            <button className={css.paginationBtn}>40</button>
           </li>
           <li>
             <button className={css.paginationBtn}>
@@ -156,6 +172,155 @@ export const Customers = () => {
           </li>
         </ul>
       </div>
+      <button className={css.menuButton} onClick={() => setIsModalOpen(true)}>
+        <svg className={css.menuIcon}>
+          <use href="/sprite.svg#icon-setting" />
+        </svg>
+      </button>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => {
+          setIsModalOpen(false);
+        }}
+        style={customStyles}
+        ariaHideApp={false}
+      >
+        <div className={styles.mobileMenuContainer}>
+          <div className={styles.menuTitleArea}>
+            <svg className={styles.menuIcon}>
+              <use href="/sprite.svg#icon-setting" />
+            </svg>
+            <p className={styles.menuTitle}>Dashboard</p>
+            <p className={styles.version}>v.01</p>
+          </div>
+          <ul className={styles.navList}>
+            <li className={styles.item}>
+              <button className={styles.button}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-key-square"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Dashboard
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-d-square"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Product
+                <svg
+                  className={`${styles.menuIcon} ${styles.navIcon} ${styles.chevron}`}
+                >
+                  <use
+                    href="./sprite.svg#icon-chevron-right"
+                    width={"20px"}
+                    height={"20px"}
+                  />
+                </svg>
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={`${styles.button} ${styles.activeBtn}`}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-user-square"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Customers
+                <svg
+                  className={`${styles.menuIcon} ${styles.navIcon} ${styles.chevron}`}
+                >
+                  <use
+                    href="./sprite.svg#icon-chevron-right"
+                    width={"20px"}
+                    height={"20px"}
+                  />
+                </svg>
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-wallet-money"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Income
+                <svg
+                  className={`${styles.menuIcon} ${styles.navIcon} ${styles.chevron}`}
+                >
+                  <use
+                    href="./sprite.svg#icon-chevron-right"
+                    width={"20px"}
+                    height={"20px"}
+                  />
+                </svg>
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-discount-shape"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Promote
+                <svg
+                  className={`${styles.menuIcon} ${styles.navIcon} ${styles.chevron}`}
+                >
+                  <use
+                    href="./sprite.svg#icon-chevron-right"
+                    width={"20px"}
+                    height={"20px"}
+                  />
+                </svg>
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button}>
+                <svg className={`${styles.menuIcon} ${styles.navIcon}`}>
+                  <use
+                    href="./sprite.svg#icon-message-question"
+                    width={"28px"}
+                    height={"28px"}
+                  />
+                </svg>
+                Help
+                <svg
+                  className={`${styles.menuIcon} ${styles.navIcon} ${styles.chevron}`}
+                >
+                  <use
+                    href="./sprite.svg#icon-chevron-right"
+                    width={"20px"}
+                    height={"20px"}
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div className={styles.userCard}>
+            <Image src="/Evano.jpg" width={42} height={42} alt="User" />
+            <div>
+              <p className={styles.userName}>Evano</p>
+              <p className={styles.userRole}>Project Manager</p>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
-}
+};
